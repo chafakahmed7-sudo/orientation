@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wijhati – Orientation pour les élèves marocains</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f2;--surface:#fff;--ink:#14213d;--muted:#55607a;--blue:#1f3fbf;--blue-soft:#e3e8fb;--gold:#e0a21b;--line:#d9dce6;--on-blue:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1426;--surface:#171e38;--ink:#eef0f8;--muted:#a3aac4;--blue:#7d95ff;--blue-soft:#1f2850;--gold:#f0b83a;--line:#2b3458;--on-blue:#0f1426;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+html[lang="ar"] body,html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] th,html[lang="ar"] .logo,html[lang="ar"] .chip{font-family:Cairo,sans-serif}
+.lang{margin-inline-start:18px;padding:6px 14px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.logo{font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;text-decoration:none;color:var(--ink)}
+.logo span{font-family:Cairo,sans-serif;color:var(--blue);margin-inline-start:8px}
+nav a{margin-inline-start:18px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--blue)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:48px 0 64px}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:52ch;margin:20px 0 28px}
+.btn{display:inline-block;background:var(--blue);color:var(--on-blue);padding:14px 24px;border-radius:10px;font-weight:600;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+.path{background:var(--blue);color:var(--on-blue);border-radius:20px;padding:28px;list-style:none;margin:0;position:relative}
+.path li{padding:0 0 22px;padding-inline-start:34px;position:relative;font-weight:500}
+.path li:last-child{padding-bottom:0}
+.path li::before{content:"";position:absolute;inset-inline-start:6px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.path li::after{content:"";position:absolute;inset-inline-start:11px;top:22px;bottom:-4px;width:2px;background:currentColor;opacity:.35}
+.path li:last-child::after{display:none}
+.path small{display:block;font-weight:400;opacity:.8}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 28px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+.steps div{padding:20px;border-inline-end:1px solid var(--line)}
+.steps div:last-child{border-inline-end:0}
+.steps h3{font-size:19px;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chip{font:inherit;font-weight:500;padding:10px 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+#res{display:grid;gap:14px}
+.r{background:var(--surface);border:1px solid var(--line);border-inline-start:5px solid var(--gold);border-radius:12px;padding:18px 20px}
+.r h3{font-size:20px;margin-bottom:4px}
+.r p{margin:4px 0;color:var(--muted);font-size:15px}
+.empty{color:var(--muted);padding:18px;border:1.5px dashed var(--line);border-radius:12px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{text-align:start;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Bricolage Grotesque";font-size:15px;background:var(--blue-soft)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.tips h3{font-size:19px;margin-bottom:6px}
+.tips p{margin:0;color:var(--muted)}
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}.steps div{border-inline-end:0;border-bottom:1px solid var(--line)}.steps div:last-child{border-bottom:0}nav a{margin-inline:0 14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#">Wijhati prof chafak<span lang="ar" dir="rtl">وجهتي</span></a>
+  <nav><a href="#parcours">Parcours</a><a href="#interets">Mes intérêts</a><a href="#apres-bac">Après le bac</a><a href="#conseils">Conseils</a><button class="chip lang" id="lang" type="button">العربية</button></nav>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <h1>Choisis ta voie, pas au hasard.</h1>
+    <p>Wijhati t’aide à comprendre le système scolaire marocain, à choisir ta filière du lycée et à découvrir les études possibles après le baccalauréat.</p>
+    <a class="btn" href="#interets">Trouver mes pistes</a>
+  </div>
+  <ol class="path" aria-label="Parcours scolaire">
+    <li>Collège<small>3ᵉ année : premiers choix</small></li>
+    <li>Tronc commun<small>Lycée, année 1</small></li>
+    <li>1ʳᵉ année du bac<small>Choix de la filière</small></li>
+    <li>2ᵉ année du bac<small>Examen national</small></li>
+    <li>Études supérieures ou formation<small>Université, écoles, OFPPT</small></li>
+  </ol>
+</div>
+
+<section id="parcours">
+  <h2>Les grandes étapes du lycée</h2>
+  <p class="lead">Chaque année prépare la suivante. Tes notes et tes goûts comptent autant l’un que l’autre.</p>
+  <div class="steps">
+    <div><h3>Tronc commun</h3><p>Tu choisis une orientation générale : scientifique, lettres ou technologique, selon l’offre de ton lycée.</p></div>
+    <div><h3>1ʳᵉ année bac</h3><p>Tu entres dans une filière : sciences, lettres, économie, technique, arts appliqués…</p></div>
+    <div><h3>2ᵉ année bac</h3><p>L’examen national et le contrôle continu déterminent ta moyenne pour l’accès aux écoles.</p></div>
+    <div><h3>Après le bac</h3><p>Université, école d’ingénieurs, commerce, santé, formation professionnelle.</p></div>
+  </div>
+</section>
+
+<section id="interets">
+  <h2>Qu’est-ce qui te plaît ?</h2>
+  <p class="lead">Sélectionne un ou plusieurs centres d’intérêt pour voir des filières et des études qui y correspondent.</p>
+  <div class="chips" id="chips" role="group" aria-label="Centres d’intérêt"></div>
+  <div id="res" aria-live="polite"></div>
+</section>
+
+<section id="apres-bac">
+  <h2>Que faire après le bac ?</h2>
+  <p class="lead">Un aperçu des principales voies. Les conditions exactes (notes, concours, dates) changent chaque année.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Voie</th><th>Durée</th><th>Accès</th><th>Pour qui ?</th></tr></thead>
+    <tbody>
+      <tr><td>Facultés (droit, lettres, sciences, économie)</td><td>3 ans (licence), puis master</td><td>Inscription, certaines facultés à accès ouvert</td><td>Ceux qui veulent une base large ou ne sont pas encore fixés</td></tr>
+      <tr><td>ENSA, ENSAM (ingénieur)</td><td>5 ans</td><td>Bac scientifique ou technique, sélection sur dossier et concours</td><td>Passionnés de sciences et de technologie</td></tr>
+      <tr><td>ENCG (commerce et gestion)</td><td>5 ans</td><td>Concours national, ouvert à plusieurs bacs</td><td>Gestion, finance, marketing, entrepreneuriat</td></tr>
+      <tr><td>Médecine, médecine dentaire</td><td>7 ans (médecine)</td><td>Bac scientifique, concours très sélectif</td><td>Santé, endurance, goût du travail long</td></tr>
+      <tr><td>CPGE (classes préparatoires)</td><td>2 ans, puis grandes écoles</td><td>Dossier, bonnes notes en sciences ou en économie</td><td>Élèves solides et réguliers</td></tr>
+      <tr><td>EST, BTS (diplômes techniques)</td><td>2 ans</td><td>Sélection sur dossier</td><td>Entrer vite dans la vie active, poursuivre ensuite si souhaité</td></tr>
+      <tr><td>OFPPT (formation professionnelle)</td><td>1 à 3 ans selon le niveau</td><td>Selon la formation, niveau du collège ou du bac</td><td>Métiers pratiques et techniques recherchés</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="conseils">
+  <h2>Avant de décider</h2>
+  <div class="tips">
+    <div><h3>Parle avec ton conseiller</h3><p>Le conseiller d’orientation de ton établissement connaît l’offre locale et les débouchés.</p></div>
+    <div><h3>Garde plusieurs options</h3><p>Prépare un plan A, un plan B et un plan C : les concours sont sélectifs.</p></div>
+    <div><h3>Vérifie les sources officielles</h3><p>Consulte les sites du ministère de l’Éducation nationale, des universités et des écoles pour les dates et conditions.</p></div>
+    <div><h3>Pense aux métiers</h3><p>Demande-toi quelle journée de travail te plairait, pas seulement quel diplôme viser.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>Wijhati est un guide d’information générale. Il ne remplace pas l’avis des conseillers d’orientation ni les informations officielles, qui peuvent changer d’une année à l’autre.</footer>
+</div>
+
+<script>
+var DATA=[
+{k:"Maths et logique",items:[
+ {t:"Bac Sciences mathématiques",d:"La filière la plus exigeante en maths et en physique. Mène aux CPGE, aux écoles d’ingénieurs et à l’informatique."},
+ {t:"Écoles d’ingénieurs (ENSA, ENSAM)",d:"Cinq ans pour devenir ingénieur en informatique, industrie, génie civil, etc."}]},
+{k:"Biologie et santé",items:[
+ {t:"Bac Sciences de la vie et de la terre (SVT)",d:"Biologie, géologie, chimie. Voie principale vers la médecine, la pharmacie et les métiers de la santé."},
+ {t:"Médecine et métiers paramédicaux",d:"Facultés de médecine, ISPITS pour les infirmiers et techniciens de santé."}]},
+{k:"Physique et technologie",items:[
+ {t:"Bac Sciences physiques",d:"Physique-chimie et maths. Ouvre aux écoles d’ingénieurs, aux sciences et à l’énergie."},
+ {t:"Bac technique (génie électrique ou mécanique)",d:"Pratique et projets concrets. Mène aux EST, BTS ou aux écoles d’ingénieurs."}]},
+{k:"Gestion et commerce",items:[
+ {t:"Bac Sciences économiques ou Gestion comptable",d:"Économie, comptabilité, gestion. Mène aux facultés d’économie, aux ENCG et aux BTS."},
+ {t:"ENCG",d:"Cinq ans de formation en management, finance, commerce international."}]},
+{k:"Langues et lettres",items:[
+ {t:"Bac Lettres ou Sciences humaines",d:"Langues, philosophie, histoire, géographie. Mène aux facultés de lettres, au journalisme, à l’enseignement."},
+ {t:"Traduction, communication, enseignement",d:"Facultés de lettres, ISIC, écoles de traduction et centres de formation des enseignants."}]},
+{k:"Droit et société",items:[
+ {t:"Facultés de droit",d:"Droit public ou privé, sciences politiques. Métiers : avocat, magistrat, administration."},
+ {t:"Bac Sciences économiques ou Lettres",d:"Deux bacs qui préparent bien au droit et aux sciences sociales."}]},
+{k:"Créativité et arts",items:[
+ {t:"Bac Arts appliqués",d:"Dessin, design, volumes. Mène aux écoles d’art et de design."},
+ {t:"Architecture (ENA)",d:"Concours d’entrée, souvent après un bac scientifique ou artistique."}]}
+];
+var DAR=[
+{k:"الرياضيات والمنطق",items:[{t:"باكالوريا العلوم الرياضية",d:"الشعبة الأكثر تطلبًا في الرياضيات والفيزياء. تقود إلى الأقسام التحضيرية ومدارس المهندسين والمعلوميات."},{t:"مدارس المهندسين (ENSA وENSAM)",d:"خمس سنوات لتصبح مهندسًا في المعلوميات والصناعة والهندسة المدنية وغيرها."}]},
+{k:"الأحياء والصحة",items:[{t:"باكالوريا علوم الحياة والأرض",d:"أحياء وجيولوجيا وكيمياء. المسار الرئيسي نحو الطب والصيدلة والمهن الصحية."},{t:"الطب والمهن شبه الطبية",d:"كليات الطب، والمعاهد العليا لمهن التمريض وتقنيات الصحة (ISPITS)."}]},
+{k:"الفيزياء والتكنولوجيا",items:[{t:"باكالوريا العلوم الفيزيائية",d:"فيزياء وكيمياء ورياضيات. تفتح نحو مدارس المهندسين والعلوم والطاقة."},{t:"باكالوريا تقنية (هندسة كهربائية أو ميكانيكية)",d:"تطبيقية ومشاريع ملموسة. تقود إلى EST وBTS أو مدارس المهندسين."}]},
+{k:"التسيير والتجارة",items:[{t:"باكالوريا العلوم الاقتصادية أو علوم التدبير المحاسباتي",d:"اقتصاد ومحاسبة وتدبير. تقود إلى كليات الاقتصاد وENCG وBTS."},{t:"ENCG",d:"خمس سنوات من التكوين في التدبير والمالية والتجارة الدولية."}]},
+{k:"اللغات والآداب",items:[{t:"باكالوريا الآداب أو العلوم الإنسانية",d:"لغات وفلسفة وتاريخ وجغرافيا. تقود إلى كليات الآداب والصحافة والتدريس."},{t:"الترجمة والتواصل والتدريس",d:"كليات الآداب، المعهد العالي للإعلام والاتصال (ISIC)، مدارس الترجمة ومراكز تكوين الأساتذة."}]},
+{k:"القانون والمجتمع",items:[{t:"كليات الحقوق",d:"قانون عام أو خاص وعلوم سياسية. المهن: محامٍ، قاضٍ، إدارة."},{t:"باكالوريا العلوم الاقتصادية أو الآداب",d:"شعبتان تحضّران جيدًا للقانون والعلوم الاجتماعية."}]},
+{k:"الإبداع والفنون",items:[{t:"باكالوريا الفنون التطبيقية",d:"رسم وتصميم وأحجام. تقود إلى مدارس الفنون والتصميم."},{t:"الهندسة المعمارية (ENA)",d:"مباراة ولوج، غالبًا بعد باكالوريا علمية أو فنية."}]}
+];
+var AR={"Parcours":"المسار","Mes intérêts":"اهتماماتي","Après le bac":"بعد الباكالوريا","Conseils":"نصائح",
+"Choisis ta voie, pas au hasard.":"اختر طريقك، لا تتركه للصدفة.",
+"Wijhati t’aide à comprendre le système scolaire marocain, à choisir ta filière du lycée et à découvrir les études possibles après le baccalauréat.":"وجهتي تساعدك على فهم المنظومة التعليمية المغربية، واختيار شعبتك في الثانوية، واكتشاف الدراسات الممكنة بعد الباكالوريا.",
+"Trouver mes pistes":"اكتشف اختياراتي","Collège":"الإعدادي","3ᵉ année : premiers choix":"السنة الثالثة: أولى الاختيارات",
+"Tronc commun":"الجذع المشترك","Lycée, année 1":"الثانوي، السنة الأولى",
+"1ʳᵉ année du bac":"الأولى باكالوريا","Choix de la filière":"اختيار الشعبة","2ᵉ année du bac":"الثانية باكالوريا","Examen national":"الامتحان الوطني",
+"Études supérieures ou formation":"التعليم العالي أو التكوين","Université, écoles, OFPPT":"الجامعة، المدارس، مكتب التكوين المهني",
+"Les grandes étapes du lycée":"المراحل الكبرى في الثانوي",
+"Chaque année prépare la suivante. Tes notes et tes goûts comptent autant l’un que l’autre.":"كل سنة تمهّد للتي بعدها. نقطك وميولك مهمان بنفس القدر.",
+"Tu choisis une orientation générale : scientifique, lettres ou technologique, selon l’offre de ton lycée.":"تختار توجّهًا عامًا: علمي أو أدبي أو تكنولوجي، حسب ما تقدمه ثانويتك.",
+"1ʳᵉ année bac":"الأولى باكالوريا","Tu entres dans une filière : sciences, lettres, économie, technique, arts appliqués…":"تدخل شعبة: علوم، آداب، اقتصاد، تقنية، فنون تطبيقية…",
+"2ᵉ année bac":"الثانية باكالوريا","L’examen national et le contrôle continu déterminent ta moyenne pour l’accès aux écoles.":"الامتحان الوطني والمراقبة المستمرة يحددان معدلك للولوج إلى المدارس.",
+"Université, école d’ingénieurs, commerce, santé, formation professionnelle.":"الجامعة، مدارس المهندسين، التجارة، الصحة، التكوين المهني.",
+"Qu’est-ce qui te plaît ?":"ما الذي يعجبك؟","Sélectionne un ou plusieurs centres d’intérêt pour voir des filières et des études qui y correspondent.":"اختر اهتمامًا واحدًا أو أكثر لترى الشعب والدراسات المناسبة لها.",
+"Que faire après le bac ?":"ماذا بعد الباكالوريا؟","Un aperçu des principales voies. Les conditions exactes (notes, concours, dates) changent chaque année.":"نظرة على أهم المسارات. الشروط الدقيقة (المعدلات، المباريات، التواريخ) تتغير كل سنة.",
+"Voie":"المسار","Durée":"المدة","Accès":"الولوج","Pour qui ?":"لمن؟",
+"Facultés (droit, lettres, sciences, économie)":"الكليات (الحقوق، الآداب، العلوم، الاقتصاد)","3 ans (licence), puis master":"3 سنوات (الإجازة)، ثم الماستر","Inscription, certaines facultés à accès ouvert":"التسجيل، وبعض الكليات ذات ولوج مفتوح","Ceux qui veulent une base large ou ne sont pas encore fixés":"لمن يريد تكوينًا واسعًا أو لم يحسم اختياره بعد",
+"ENSA, ENSAM (ingénieur)":"ENSA وENSAM (مهندس)","5 ans":"5 سنوات","Bac scientifique ou technique, sélection sur dossier et concours":"باكالوريا علمية أو تقنية، انتقاء بالملف ومباراة","Passionnés de sciences et de technologie":"عشاق العلوم والتكنولوجيا",
+"ENCG (commerce et gestion)":"ENCG (التجارة والتسيير)","Concours national, ouvert à plusieurs bacs":"مباراة وطنية، مفتوحة لعدة شعب","Gestion, finance, marketing, entrepreneuriat":"التسيير، المالية، التسويق، المقاولة",
+"Médecine, médecine dentaire":"الطب، طب الأسنان","7 ans (médecine)":"7 سنوات (الطب)","Bac scientifique, concours très sélectif":"باكالوريا علمية، مباراة انتقائية جدًا","Santé, endurance, goût du travail long":"الصحة، التحمل، حب العمل الطويل",
+"CPGE (classes préparatoires)":"الأقسام التحضيرية (CPGE)","2 ans, puis grandes écoles":"سنتان، ثم المدارس العليا","Dossier, bonnes notes en sciences ou en économie":"ملف، ونقط جيدة في العلوم أو الاقتصاد","Élèves solides et réguliers":"التلاميذ المتميزون والمنتظمون",
+"EST, BTS (diplômes techniques)":"EST وBTS (دبلومات تقنية)","2 ans":"سنتان","Sélection sur dossier":"انتقاء بالملف","Entrer vite dans la vie active, poursuivre ensuite si souhaité":"الدخول سريعًا إلى سوق الشغل ومتابعة الدراسة لاحقًا إن رغبت",
+"OFPPT (formation professionnelle)":"مكتب التكوين المهني (OFPPT)","1 à 3 ans selon le niveau":"من سنة إلى 3 سنوات حسب المستوى","Selon la formation, niveau du collège ou du bac":"حسب التكوين، مستوى الإعدادي أو الباكالوريا","Métiers pratiques et techniques recherchés":"المهن التطبيقية والتقنية المطلوبة",
+"Avant de décider":"قبل أن تقرر","Parle avec ton conseiller":"تحدث مع مستشارك","Le conseiller d’orientation de ton établissement connaît l’offre locale et les débouchés.":"مستشار التوجيه بمؤسستك يعرف العروض المحلية والآفاق.",
+"Garde plusieurs options":"احتفظ بعدة خيارات","Prépare un plan A, un plan B et un plan C : les concours sont sélectifs.":"حضّر خطة أ وخطة ب وخطة ج: المباريات انتقائية.",
+"Vérifie les sources officielles":"تحقق من المصادر الرسمية","Consulte les sites du ministère de l’Éducation nationale, des universités et des écoles pour les dates et conditions.":"راجع مواقع وزارة التربية الوطنية والجامعات والمدارس لمعرفة التواريخ والشروط.",
+"Pense aux métiers":"فكّر في المهن","Demande-toi quelle journée de travail te plairait, pas seulement quel diplôme viser.":"اسأل نفسك أي يوم عمل يعجبك، وليس فقط أي دبلوم تستهدف.",
+"Wijhati est un guide d’information générale. Il ne remplace pas l’avis des conseillers d’orientation ni les informations officielles, qui peuvent changer d’une année à l’autre.":"وجهتي دليل معلومات عامة. لا يغني عن رأي مستشاري التوجيه ولا عن المعلومات الرسمية التي قد تتغير من سنة لأخرى."};
+var ar=false,sel={},chips=document.getElementById("chips"),res=document.getElementById("res");
+DATA.forEach(function(g,i){
+  var b=document.createElement("button");b.className="chip";b.type="button";b.textContent=g.k;b.setAttribute("aria-pressed","false");
+  b.onclick=function(){sel[i]=!sel[i];b.setAttribute("aria-pressed",String(!!sel[i]));render()};
+  chips.appendChild(b);
+});
+function render(){
+  res.innerHTML="";var any=false;
+  for(var c=0;c<chips.children.length;c++)chips.children[c].textContent=ar?DAR[c].k:DATA[c].k;
+  DATA.forEach(function(g0,i){var g=ar?DAR[i]:g0;
+    if(!sel[i])return;any=true;
+    g.items.forEach(function(it){
+      var d=document.createElement("div");d.className="r";
+      var h=document.createElement("h3");h.textContent=it.t;
+      var p=document.createElement("p");p.textContent=it.d;
+      var s=document.createElement("p");s.textContent=(ar?"مرتبط بـ: ":"Lié à : ")+g.k;s.style.fontSize="13px";
+      d.appendChild(h);d.appendChild(p);d.appendChild(s);res.appendChild(d);
+    });
+  });
+  if(!any){var e=document.createElement("div");e.className="empty";e.textContent=ar?"اختر اهتمامًا واحدًا على الأقل أعلاه لترى الاقتراحات.":"Choisis au moins un centre d’intérêt ci-dessus pour voir des pistes.";res.appendChild(e)}
+}
+function walk(){var w=document.createTreeWalker(document.body,4),n;while(n=w.nextNode()){if(n.parentNode.tagName==="SCRIPT")continue;var t=n.nodeValue.trim();if(!t)continue;if(n._o===undefined){if(!AR[t])continue;n._o=n.nodeValue}var o=n._o.trim();n.nodeValue=ar?n._o.replace(o,function(){return AR[o]}):n._o}}
+var btn=document.getElementById("lang");
+btn.onclick=function(){ar=!ar;document.documentElement.lang=ar?"ar":"fr";document.documentElement.dir=ar?"rtl":"ltr";document.title=ar?"وجهتي – التوجيه المدرسي بالمغرب":"Wijhati – Orientation pour les élèves marocains";walk();render();btn.textContent=ar?"Français":"العربية"};
+render();
+</script>
+</body>
+</html>
